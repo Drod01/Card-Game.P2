@@ -1,5 +1,5 @@
 
-# Card Game
+# Card Clash
 
 This is a simple card game implementation in C. The code consists of two files: `cards.h` and `cards.c`.
 
