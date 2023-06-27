@@ -1,93 +1,86 @@
-# Card-Clash.P2
 
-This project is one of my first projects I worked on in my switch to Computer Science.
+# Card Game
 
-Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
+This is a simple card game implementation in C. The code consists of two files: `cards.h` and `cards.c`.
+
+## Description
+
+The card game involves creating a deck of cards with different types (ATTACK, DEFEND, RUN) and values. Players can perform various actions based on the type of the card drawn. The game logic and card management are handled by the functions defined in `cards.c`.
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+To get started with the card game implementation, follow these steps:
 
-### Prerequisites
+1. Ensure you have a C compiler installed on your system.
+2. Download or clone the code repository to your local machine.
+3. Open the project in your preferred C development environment.
 
-Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+### Usage
 
-### Installing
+1. Include the `cards.h` header in your C program.
+2. Implement the game logic using the provided functions to manage the cards.
+3. Compile and run your program.
 
-A step by step series of examples that tell you how to get a development
-environment running
+Make sure to link the `cards.c` file during the compilation process.
 
-Say what the step will be
+### Example
 
-    Give the example
+Here's an example of how to use the card game implementation:
 
-And repeat
+```c
+#include <stdio.h>
+#include "cards.h"
 
-    until finished
+int main() {
+    // Build a deck of 10 cards
+    Card* deck = buildCards(10);
 
-End with an example of getting some data out of the system or using it
-for a little demo
+    // Print the initial deck
+    printf("Initial Deck: ");
+    printCards(deck);
 
-## Running the tests
+    // Remove the first card from the deck
+    deck = removeCard(deck);
 
-Explain how to run the automated tests for this system
+    // Add a new card to the deck
+    Card* newCard = createCard();
+    deck = addCard(deck, newCard);
 
-### Sample Tests
+    // Print the updated deck
+    printf("Updated Deck: ");
+    printCards(deck);
 
-Explain what these tests test and why
+    // Destroy the deck and free the memory
+    deck = destroyCards(deck);
 
-    Give an example
+    return 0;
+}
+```
 
-### Style test
+### Contributions
 
-Checks if the best practices and the right coding style has been used.
+Contributions to this project are welcome! If you would like to contribute, please follow these steps:
 
-    Give an example
+Fork the repository on GitHub.
+Create a new branch for your feature or bug fix.
+Make your changes in the branch and commit them.
+Push your branch to your forked repository.
+Submit a pull request to the original repository.
+Please ensure that your contributions adhere to the following guidelines:
 
-## Deployment
+Maintain a clear and concise coding style consistent with the existing codebase.
+Provide detailed information about the changes or additions made.
+Test your changes thoroughly to ensure they do not introduce any issues.
+Follow the existing naming conventions and code formatting.
+Be respectful and considerate towards other contributors.
+Your contributions can include bug fixes, feature enhancements, documentation improvements, or any other valuable additions to the project.
 
-Add additional notes to deploy this on a live system
+### License
 
-## Built With
+This project is licensed under the [MIT License](LICENSE).
 
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
+Feel free to modify and use the code for personal and commercial purposes.
 
-## Contributing
+---
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
-## Authors
-
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
-
-## License
-
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
-
-## Acknowledgments
-
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc
+Please note that this README is a basic template, and you can modify it to include more specific details about your project.
