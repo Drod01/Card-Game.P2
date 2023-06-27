@@ -1,4 +1,4 @@
-# Card-Game.P2
+# Card-Clash.P2
 
 This project is one of my first projects I worked on in my switch to Computer Science.
 
